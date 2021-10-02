@@ -1,8 +1,9 @@
-let movies = [
+var movies = `[
     {
         "name": "Frozen",
         "year": 2013,
-        "runtime": 102,
+        "like": 102,
+        "img": "brave-1.jpeg",
         "categories": [
             "animation",
             "adventure",
@@ -21,19 +22,13 @@ let movies = [
             "Chris Buck",
             "Shane Morris"
         ],
-        "actors": [
-            "Kristen Bell",
-            "Idina Menzel",
-            "Jonathan Groff",
-            "Josh Gad",
-            "Santino Fontana"
-        ],
         "storyline": "It is the story of a fearless princess who sets off on a journey alongside a rugged iceman, his loyal reindeer, and a naive snowman to find her estranged sister, whose icy powers have inadvertently trapped their kingdom in eternal winter."
     },
     {
         "name": "How To Train Your Dragon",
         "year": 2010,
-        "runtime": 98,
+        "like": 98,
+        "img": "brave-1.jpeg",
         "categories": [
             "animation",
             "action",
@@ -54,17 +49,13 @@ let movies = [
             "Cressida Cowell",
             "Adam F. Goldberg"
         ],
-        "actors": [
-            "Jay Baruchel",
-            "Gerard Butler",
-            "Christopher Mintz-Plasse"
-        ],
         "storyline": "A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed."
     },
     {
         "name": "Moana",
         "year": 2016,
-        "runtime": 107,
+        "like": 107,
+        "img": "brave-1.jpeg",
         "categories": [
             "animation",
             "adventure",
@@ -87,25 +78,13 @@ let movies = [
             "Aaron Kandell",
             "Jordan Kandell"
         ],
-        "actors": [
-            "Auli'i Cravalho",
-            "Dwayne Johnson",
-            "Rachel House",
-            "Temuera Morrison",
-            "Jemaine Clement",
-            "Nicole Scherzinger",
-            "Alan Tudyk",
-            "Oscar Kightley",
-            "Troy Polamalu",
-            "Puanani Cravalho",
-            "Louise Bush"
-        ],
         "storyline": "In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island, she answers the Ocean's call to seek out the Demigod to set things right."
     },
     {
         "name": "Jurassic Park",
         "year": 1993,
-        "runtime": 127,
+        "like": 127,
+        "img": "brave-1.jpeg",
         "categories": [
             "adventure",
             "thriller",
@@ -127,7 +106,8 @@ let movies = [
     {
         "name": "Incredibles 2",
         "year": 2018,
-        "runtime": 118,
+        "like": 118,
+        "img": "brave-1.jpeg",
         "categories": [
             "animation",
             "action",
@@ -138,29 +118,13 @@ let movies = [
         "writer": [
             "Brad Bird"
         ],
-        "actors": [
-            "Craig T. Nelson",
-            "Holly Hunter",
-            "Sarah Vowell",
-            "Huck Milner",
-            "Catherine Keener",
-            "Eli Fucile",
-            "Bob Odenkirk",
-            "Samuel L. Jackson",
-            "Michael Bird",
-            "Sophia Bush",
-            "Brad Bird",
-            "Phil LaMarr",
-            "Isabella Rossellini",
-            "Adam Gates",
-            "Jonathan Banks"
-        ],
-        "storyline": "While the Parr family has accepted its collective calling as superheroes, the fact remains that their special heroism is still illegal. After they are arrested after unsuccessfully trying to stop the Underminer, their future seems bleak. However, the wealthy Deavor siblings of Devtech offer new hope with a bold project to rehabilitate the public image and legal status of Supers, with Elastigirl being assigned on point to be the shining example. Now having agreed for now to stay at home to care of the kids, Mr. Incredible finds domestic life a daunting challenge, especially with baby Jack-Jack's newly emerged powers making him almost impossible to manage. However, Elastigirl soon has her own concerns dealing with the menace of a new supervillain, Screenslaver, who is wreaking havoc with his mind control abilities. Now, Elastigirl must solve the mystery of this enemy, who has malevolent designs on the world with the Parr family and friends key targets of this evil. Written by Kenneth Chisholm (kchishol@rogers.com)\n\n"
+        "storyline": "While the Parr family has accepted its collective calling as superheroes, the fact remains that their special heroism is still illegal. After they are arrested after unsuccessfully trying to stop the Underminer, their future seems bleak. However, the wealthy Deavor siblings of Devtech offer new hope with a bold project to rehabilitate the public image and legal status of Supers, with Elastigirl being assigned on point to be the shining example. Now having agreed for now to stay at home to care of the kids, Mr. Incredible finds domestic life a daunting challenge, especially with baby Jack-Jack's newly emerged powers making him almost impossible to manage. However, Elastigirl soon has her own concerns dealing with the menace of a new supervillain, Screenslaver, who is wreaking havoc with his mind control abilities. Now, Elastigirl must solve the mystery of this enemy, who has malevolent designs on the world with the Parr family and friends key targets of this evil. Written by Kenneth Chisholm (kchishol@rogers.com)"
     },
     {
         "name": "Toy Story 4",
         "year": 2019,
-        "runtime": 100,
+        "like": 100,
+        "img": "brave-1.jpeg",
         "categories": [
             "animation",
             "adventure",
@@ -180,29 +144,13 @@ let movies = [
             "Martin Hynes",
             "Stephany Folsom"
         ],
-        "actors": [
-            "Tom Hanks",
-            "Tim Allen",
-            "Annie Potts",
-            "Tony Hale",
-            "Keegan-Michael Key",
-            "Madeleine McGraw",
-            "Christina Hendricks",
-            "Jordan Peele",
-            "Keanu Reeves",
-            "Ally Maki",
-            "Jay Hernandez",
-            "Lori Alan",
-            "Joan Cusack",
-            "Bonnie Hunt",
-            "Kristen Schaal"
-        ],
         "storyline": "When a new toy called Forky joins Woody and the gang, a road trip alongside old and new friends reveals how big the world can be for a toy."
     },
     {
         "name": "The Lion King",
         "year": 1994,
-        "runtime": 88,
+        "like": 88,
+        "img": "brave-1.jpeg",
         "categories": [
             "animated",
             "musical"
@@ -218,28 +166,13 @@ let movies = [
             "Jonathan Roberts",
             "Joe Ranft"
         ],
-        "actors": [
-            "Matthew Broderick",
-            "James Earl Jones",
-            "Jeremy Irons",
-            "Rowan Atkinson",
-            "Moira Kelly",
-            "Nathan Lane",
-            "Ernie Sabella",
-            "Robert Guillaume",
-            "Jonathan Taylor Thomas",
-            "Niketa Calame",
-            "Whoopi Goldberg",
-            "Cheech Marin",
-            "Jim Cummings",
-            "Madge Sinclair"
-        ],
         "storyline": "The Lion King tells the story of Simba, a young lion who is to succeed his father, Mufasa, as King of the Pride Lands; however, after Simba's uncle Scar (Mufasa's jealous younger brother), murders Mufasa, Simba is manipulated into thinking he was responsible and flees into exile. Upon maturation living with two wastrels, Simba is given some valuable perspective from his childhood friend, Nala, and his shaman, Rafiki, before returning to challenge Scar to end his tyranny and take his place in the Circle of Life as the rightful King."
     },
     {
         "name": "Brave",
         "year": 2013,
-        "runtime": 107,
+        "like": 107,
+        "img": "brave-1.jpeg",
         "categories": [
             "animation",
             "adventure",
@@ -263,4 +196,4 @@ let movies = [
         ],
         "storyline": "Determined to make her own path in life, Princess Merida (Kelly Macdonald) defies a custom that brings chaos to her kingdom. Granted one wish, Merida must rely on her bravery and her archery skills to undo a beastly curse."
     }
-]
+]`

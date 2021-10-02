@@ -1,34 +1,67 @@
-function calculateInvoice(starterPrice, maindishPrice, dessertPrice, beveragePrice) {
+console.log(movies);
 
-    let sum = starterPrice + maindishPrice + dessertPrice + beveragePrice;
-    return sum;
+let moviesParsed = JSON.parse(movies);
+console.log(moviesParsed.length);
+
+for (let i = 0; i < moviesParsed.length; i++) {
+    let readParsed = JSON.parse(moviesParsed[i].like);
+
+    document.getElementById(
+        "movie-result"
+    ).innerHTML += `
+  <div class="my-css">
+  <div class="card border mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+        src="../img/${moviesParsed[i].img
+        }"
+          class="small-img img-fluid rounded-start"
+          alt="Movie photo"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body ${readParsed ? "read" : "not-read"}">
+          <h5 class="card-title"><a class="" data-bs-toggle="modal" data-bs-target="#movieModal${i}">
+          ${moviesParsed[i].name}
+        </a></h5>
+          <p class="card-text">
+          ${moviesParsed[i].storyline}
+          </p>
+          <p class="card-text">
+            <small class="text-muted"
+              >Last updated 3 mins ago</small
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="movieModal${i}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">${moviesParsed[i].name}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <img class=big-img src="../img/${moviesParsed[i].img
+        }" class="card-img-top" alt="big car photo">
+        <p>Description: ${moviesParsed[i].storyline}</p>
+        <p>Pages: ${moviesParsed[i]["release-date"]}</p>
+        <p>Read: ${moviesParsed[i].like
+        } </p> 
+          <br/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
 }
-
-
-let sumInvoice = calculateInvoice(7, 14, 5, 3);
-console.log(`invoice for chickenPasta is: ${sumInvoice}`)
-
-let sumInvoice2 = calculateInvoice(7, 15, 5, 4);
-console.log(`invoice for BolonesePasta is: ${sumInvoice2}`)
-
-let sumInvoice3 = calculateInvoice(4, 12, 4, 3);
-console.log(`invoice for carbonaraPasta is: ${sumInvoice3}`)
-
-
-// Student Invoice
-function studentInvoice(starterPrice, maindishPrice, dessertPrice, beveragePrice) {
-
-    let sumWithDiscount = ((starterPrice + maindishPrice + dessertPrice) * 90) / 100;
-    sumWithDiscount += beveragePrice;
-
-    return sumWithDiscount;
-}
-
-let studentInvoiceIs = studentInvoice(7, 14, 5, 3);
-console.log(`Student invoice for chickenPasta is: ${studentInvoiceIs}`)
-
-let studentInvoiceIs2 = studentInvoice(7, 15, 5, 4);
-console.log(`Student invoice for BolonesePasta is: ${studentInvoiceIs2}`)
-
-let studentInvoiceIs3 = studentInvoice(4, 12, 4, 3);
-console.log(`Student invoice for carbonaraPasta is: ${studentInvoiceIs3}`)
