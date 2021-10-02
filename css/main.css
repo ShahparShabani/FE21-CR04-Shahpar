@@ -34,23 +34,8 @@
   font-family: "Dancing Script", cursive !important;
 }
 
-#main-container .row .my-css .card {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 100%;
-  margin: 0 auto;
-}
-
 #main-container .row .my-css .card .card-text {
   font-size: 0.875rem;
-}
-
-#main-container .row .my-css img {
-  background-color: #f5f6f8;
-  height: auto;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 #footer-container {
