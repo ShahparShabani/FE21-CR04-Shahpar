@@ -26,6 +26,10 @@ body {
     color: $white;
     background-color: $gray-600;
 
+    .navbar-toggler {
+      border-color: $amber-500;
+    }
+
     a {
       color: $black;
     }

@@ -28,6 +28,10 @@ body {
   background-color: #6c757d;
 }
 
+#header-container .my-nav-bottom .navbar-toggler {
+  border-color: #FFC107;
+}
+
 #header-container .my-nav-bottom a {
   color: #000;
 }
