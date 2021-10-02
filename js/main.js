@@ -1,21 +1,25 @@
-console.log(movies);
+// Read movies from json file
+let moviesParse = JSON.parse(movies);
 
-let moviesParsed = JSON.parse(movies);
-console.log(moviesParsed.length);
+// Set/Get movies to/from localstorage
+for (let i = 0; i < moviesParse.length; i++) {
+  localStorage.setItem(`${i}`, JSON.stringify(moviesParse[i]));
 
-for (let i = 0; i < moviesParsed.length; i++) {
-    let likeParsed = JSON.parse(moviesParsed[i].like);
+  let movieParsedLocal = JSON.parse( localStorage.getItem(`${i}`));
+  console.log(typeof movieParsedLocal)
+  
+  let likeParsed = movieParsedLocal.like;
 
-    document.getElementById(
-        "movie-result"
-    ).innerHTML += `
+  document.getElementById(
+    "movie-result"
+  ).innerHTML += `
   <div class="my-css">
   <div class="card border mb-3" style="max-width: 540px">
     <div class="row g-0">
       <div class="col-md-4">
         <img
-        src="../img/${moviesParsed[i].img
-        }"
+        src="../img/${movieParsedLocal.img
+    }"
           class="small-img img-fluid rounded-start"
           alt="Movie photo"
         />
@@ -23,15 +27,15 @@ for (let i = 0; i < moviesParsed.length; i++) {
       <div class="col-md-8">
         <div class="card-body ${likeParsed ? "read" : "not-read"}">
           <h5 class="card-title"><a class="" data-bs-toggle="modal" data-bs-target="#movieModal${i}">
-          ${moviesParsed[i].name}
+          ${movieParsedLocal.name}
         </a></h5>
           <p class="card-text">
-          ${moviesParsed[i].storyline}
+          ${movieParsedLocal.storyline}
           </p>
           <p class="card-text">
             <small class="text-muted"
-              ><a class="" data-bs-toggle="modal" data-bs-target="#movieModal2${i}">
-              ${moviesParsed[i].like}</a></small
+              ><a class="like-btn" id="a-like${i}"" data-bs-toggle="modal" data-bs-target="#movieModal2${i}">
+              ${movieParsedLocal.like}</a><label type=label id="like${i}">${movieParsedLocal.like}</label></small
             >
           </p>
         </div>
@@ -45,16 +49,16 @@ for (let i = 0; i < moviesParsed.length; i++) {
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered ">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">${moviesParsed[i].name}</h5>
+          <h5 class="modal-title" id="exampleModalLabel">${movieParsedLocal.name}</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-        <img class=big-img src="../img/${moviesParsed[i].img
-        }" class="card-img-top" alt="big car photo">
-        <p>Description: ${moviesParsed[i].storyline}</p>
-        <p>Pages: ${moviesParsed[i]["release-date"]}</p>
-        <p>Read: ${moviesParsed[i].like
-        } </p> 
+        <img class=big-img src="../img/${movieParsedLocal.img
+    }" class="card-img-top" alt="big car photo">
+        <p>Description: ${movieParsedLocal.storyline}</p>
+        <p>Pages: ${movieParsedLocal["release-date"]}</p>
+        <p>Read: ${movieParsedLocal.like
+    } </p> 
           <br/>
         </div>
         <div class="modal-footer">
@@ -65,6 +69,33 @@ for (let i = 0; i < moviesParsed.length; i++) {
     </div>
   </div>
   `;
+
 }
+
+
+// Get like-btn & add event listener to each one
+const likeButtons = document.getElementsByClassName("like-btn");
+console.log(likeButtons.length);
+
+for (let i = 0; i < likeButtons.length; i++) {
+
+  likeButtons[i].addEventListener('click', function () {
+   
+    // Get related movie from Localstorage
+    let movieParsedLocal = JSON.parse( localStorage.getItem(`${i}`));
+  
+  
+    // Increase like & update Localstorage
+    movieParsedLocal.like ++;
+    localStorage.setItem(`${i}`, JSON.stringify(movieParsedLocal));
+
+    // Dispaly new likes to the card
+    document.getElementById(`like${i}`).innerHTML = movieParsedLocal.like
+ 
+  })
+ 
+
+}
+
 
 
