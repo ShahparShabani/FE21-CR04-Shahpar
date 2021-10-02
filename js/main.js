@@ -108,6 +108,7 @@ const likeButtons = document.getElementsByClassName("like-btn");
 for (let i = 0; i < likeButtons.length; i++) {
 
   likeButtons[i].addEventListener('click', function () {
+    console.log('in like ', i)
 
     // Get related movie from Localstorage
     let movies = new Array();
@@ -144,21 +145,35 @@ function dynamicSort(property) {
 
 
 // Add eventlistener to sort btn
-document.getElementById('sort-btn').addEventListener('click', function () {
+document.getElementById('sort-btn').addEventListener('click', sort);
+
+function sort() {
+
+  // Read data from local storage
+  let moviesArr = ReadMovieFromLocalStorage();
 
   //Sort based on likes
-  movieDataArray.sort(dynamicSort("like"));
+  moviesArr.sort(dynamicSort("like"));
+  console.log('in', moviesArr.sort(dynamicSort("like")))
 
-  overwriteLocalstorage();
+  overwriteLocalstorage(moviesArr);
 
-  createCards();
+  location.reload();
 
-});
+}
 
-function overwriteLocalstorage() {
+function overwriteLocalstorage(moviesArr) {
 
   for (let i = 0; i < movieDataArray.length; i++) {
-    localStorage.setItem(`${i}`, JSON.stringify(moviesParse[i]))
-    console.log(`overwriteLocalstorage`, localStorage.getItem(`${i}`))
+    localStorage.setItem(`${i}`, JSON.stringify(moviesArr[i]));
   }
+}
+
+function ReadMovieFromLocalStorage() {
+  let moviesArray = new Array();
+
+  for (let i = 0; i < moviesParse.length; i++) {
+    moviesArray[i] = JSON.parse(localStorage.getItem(`${i}`));
+  }
+  return moviesArray
 }
