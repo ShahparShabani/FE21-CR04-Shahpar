@@ -34,6 +34,12 @@
   font-family: "Dancing Script", cursive !important;
 }
 
+#main-container .row .my-css .card a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+
 #main-container .row .my-css .card .card-text {
   font-size: 0.875rem;
 }

@@ -44,15 +44,23 @@
         // width: 100%;
         // margin: 0 auto;
 
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          color: $black;
+        }
+
         .card-text {
           font-size: 0.875rem;
         }
+
+        img {
+          // background-color: #f5f6f8;
+          // height: 100%;
+          // align-self: center;
+        }
       }
-      img {
-        // background-color: #f5f6f8;
-        // height: 100%;
-        // align-self: center;
-      }
+     
     }
   }
 }

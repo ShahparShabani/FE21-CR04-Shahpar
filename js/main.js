@@ -4,7 +4,7 @@ let moviesParsed = JSON.parse(movies);
 console.log(moviesParsed.length);
 
 for (let i = 0; i < moviesParsed.length; i++) {
-    let readParsed = JSON.parse(moviesParsed[i].like);
+    let likeParsed = JSON.parse(moviesParsed[i].like);
 
     document.getElementById(
         "movie-result"
@@ -21,7 +21,7 @@ for (let i = 0; i < moviesParsed.length; i++) {
         />
       </div>
       <div class="col-md-8">
-        <div class="card-body ${readParsed ? "read" : "not-read"}">
+        <div class="card-body ${likeParsed ? "read" : "not-read"}">
           <h5 class="card-title"><a class="" data-bs-toggle="modal" data-bs-target="#movieModal${i}">
           ${moviesParsed[i].name}
         </a></h5>
@@ -30,7 +30,8 @@ for (let i = 0; i < moviesParsed.length; i++) {
           </p>
           <p class="card-text">
             <small class="text-muted"
-              >Last updated 3 mins ago</small
+              ><a class="" data-bs-toggle="modal" data-bs-target="#movieModal2${i}">
+              ${moviesParsed[i].like}</a></small
             >
           </p>
         </div>
@@ -65,3 +66,5 @@ for (let i = 0; i < moviesParsed.length; i++) {
   </div>
   `;
 }
+
+
