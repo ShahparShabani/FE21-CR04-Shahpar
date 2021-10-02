@@ -1,21 +1,40 @@
-nav {
-  background-color: #CF112C;
-}
-
-nav .myIsActive {
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+/** Color Palette **/
+/* Basic colors*/
+/* gray */
+/* Yellow */
+/* Amber */
+/* Orange */
+#header-container nav .myIsActive {
   font-weight: bolder;
 }
 
-.carousel-inner {
-  height: 50vh;
+#header-container .my-nav-top {
+  color: #fff;
+  background-color: #000;
 }
 
-.carousel-item {
-  height: 50vh;
+#header-container .my-nav-top a {
+  color: #fff;
+}
+
+#header-container .my-nav-bottom {
+  color: #000;
+  background-color: #6c757d;
+}
+
+#header-container .my-nav-bottom a {
+  color: #000;
+}
+
+#main-container .main-title {
+  text-shadow: 2px 2px 4px #6b2f2f;
+  font-size: 4rem;
+  font-weight: 600;
+  font-family: "Dancing Script", cursive !important;
 }
 
 #main-container .row .my-css .card {
-  min-height: 33rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   height: 100%;
@@ -27,7 +46,7 @@ nav .myIsActive {
 }
 
 #main-container .row .my-css img {
-  background-color: #F5F6F8;
+  background-color: #f5f6f8;
   height: auto;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -35,8 +54,8 @@ nav .myIsActive {
 }
 
 #footer-container {
-  background-color: #79c9d8;
-  color: black;
+  background-color: #FFC400;
+  color: #fff;
 }
 
 #footer-container a {

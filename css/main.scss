@@ -1,48 +1,65 @@
-nav {
-    background-color: #CF112C;
-  
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import "variables";
+
+#header-container {
+  nav {
     .myIsActive {
-        font-weight: bolder;
+      font-weight: bolder;
     }
   }
-  
-  .carousel-inner {
-    height: 50vh;
+
+  .my-nav-top {
+    color: $white;
+    background-color: $black;
+
+    a {
+      color: $white;
+    }
   }
-  .carousel-item {
-    height: 50vh;
+
+  .my-nav-bottom {
+    color: $black;
+    background-color: $gray-600;
+
+    a {
+      color: $black;
+    }
   }
-  
-  #main-container {
-    .row {
-  
-      .my-css {
-        .card {
-          min-height: 33rem;
-          flex-wrap: wrap;
-          height: 100%;
-          margin: 0 auto;
-  
-          .card-text {
-            font-size: 0.875rem;
-          }
+}
+
+#main-container {
+  .main-title {
+    text-shadow: 2px 2px 4px #6b2f2f;
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: "Dancing Script", cursive !important;
+  }
+  .row {
+    .my-css {
+      .card {
+        // min-height: 33rem;
+        flex-wrap: wrap;
+        height: 100%;
+        margin: 0 auto;
+
+        .card-text {
+          font-size: 0.875rem;
         }
-        img {
-          background-color: #F5F6F8;
-          height: auto;
-          align-self: center;
-        }
+      }
+      img {
+        background-color: #f5f6f8;
+        height: auto;
+        align-self: center;
       }
     }
   }
-  
-  #footer-container {
-      background-color:rgb(121, 201, 216);
-      color: black;
-  
-      a{
-          text-decoration: none;
-      }
-     
+}
+
+#footer-container {
+  background-color: $amber-a400;
+  color: $white;
+
+  a {
+    text-decoration: none;
   }
-  
+}
