@@ -22,7 +22,7 @@ var movies = `[
             "Chris Buck",
             "Shane Morris"
         ],
-        "storyline": "It is the story of a fearless princess who sets off on a journey alongside a rugged iceman, his loyal reindeer, and a naive snowman to find her estranged sister, whose icy powers have inadvertently trapped their kingdom in eternal winter."
+        "storyline": "It is the story of a fearless princess who sets off on a journey alongside a rugged iceman, his loyal reindeer, and a naive snowman to find her estranged sister."
     },
     {
         "name": "How To Train Your Dragon",
@@ -49,7 +49,7 @@ var movies = `[
             "Cressida Cowell",
             "Adam F. Goldberg"
         ],
-        "storyline": "A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed."
+        "storyline": "A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures."
     },
     {
         "name": "Moana",
@@ -78,7 +78,7 @@ var movies = `[
             "Aaron Kandell",
             "Jordan Kandell"
         ],
-        "storyline": "In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island, she answers the Ocean's call to seek out the Demigod to set things right."
+        "storyline": "In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island, she answers the Ocean's call to seek out the Demigod."
     },
     {
         "name": "Jurassic Park",
@@ -101,7 +101,7 @@ var movies = `[
             "Laura Dern",
             "Jeff Goldblum"
         ],
-        "storyline": "Huge advancements in scientific technology have enabled a mogul ... critical security systems are shut down and it now becomes a race for survival with dinosaurs roaming freely over the island."
+        "storyline": "Huge advancements in scientific technology have enabled a mogul critical security systems are shut down and it now becomes a race for survival with dinosaurs roaming freely over the island."
     },
     {
         "name": "Incredibles 2",
@@ -118,7 +118,7 @@ var movies = `[
         "writer": [
             "Brad Bird"
         ],
-        "storyline": "While the Parr family has accepted its collective calling as superheroes, the fact remains that their special heroism is still illegal. After they are arrested after unsuccessfully trying to stop the Underminer, their future seems bleak. However, the wealthy Deavor siblings of Devtech offer new hope with a bold project to rehabilitate the public image and legal status of Supers, with Elastigirl being assigned on point to be the shining example."
+        "storyline": "While the Parr family has accepted its collective calling as superheroes, the fact remains that their special heroism is still illegal."
     },
     {
         "name": "Toy Story 4",
@@ -166,7 +166,7 @@ var movies = `[
             "Jonathan Roberts",
             "Joe Ranft"
         ],
-        "storyline": "The Lion King tells the story of Simba, a young lion who is to succeed his father, Mufasa, as King of the Pride Lands; however, after Simba's uncle Scar (Mufasa's jealous younger brother), murders Mufasa, Simba is manipulated into thinking he was responsible and flees into exile. Upon maturation living with two wastrels, Simba is given some valuable perspective from his childhood friend, Nala, and his shaman, Rafiki, before returning to challenge Scar to end his tyranny and take his place in the Circle of Life as the rightful King."
+        "storyline": "The Lion King tells the story of Simba, a young lion who is to succeed his father, Mufasa, as King of the Pride Lands."
     },
     {
         "name": "Brave",
@@ -194,6 +194,6 @@ var movies = `[
             "Aaron Kandell",
             "Jordan Kandell"
         ],
-        "storyline": "Determined to make her own path in life, Princess Merida (Kelly Macdonald) defies a custom that brings chaos to her kingdom. Granted one wish, Merida must rely on her bravery and her archery skills to undo a beastly curse."
+        "storyline": "Determined to make her own path in life, Princess Merida (Kelly Macdonald) defies a custom that brings chaos to her kingdom. Granted one wish, Merida must rely on her bravery."
     }
 ]`

@@ -14,9 +14,9 @@ for (let i = 0; i < moviesParse.length; i++) {
     "movie-result"
   ).innerHTML += `
   <div class="my-css">
-  <div class="card border mb-3" style="max-width: 540px">
+  <div class="card h-100 border mb-3 " style="max-width: 540px">
     <div class="row g-0">
-      <div class="col-md-4">
+      <div class="col-md-5">
         <img
         src="../img/${movieParsedLocal.img
     }"
@@ -24,18 +24,18 @@ for (let i = 0; i < moviesParse.length; i++) {
           alt="Movie photo"
         />
       </div>
-      <div class="col-md-8">
-        <div class="card-body ${likeParsed ? "read" : "not-read"}">
+      <div class="col-md-7">
+        <div class="card-body h-100 ${likeParsed ? "read" : "not-read"}">
           <h5 class="card-title"><a class="" data-bs-toggle="modal" data-bs-target="#movieModal${i}">
           ${movieParsedLocal.name}
         </a></h5>
           <p class="card-text">
           ${movieParsedLocal.storyline}
           </p>
-          <p class="card-text">
+          <p id=like-wrapper class="card-text">
             <small class="text-muted"
               ><a class="like-btn" id="a-like${i}"" data-bs-toggle="modal" data-bs-target="#movieModal2${i}">
-              ${movieParsedLocal.like}</a><label type=label id="like${i}">${movieParsedLocal.like}</label></small
+             <i class="fas fa-thumbs-up"></i> </a><span id="like${i}" class=dot>${movieParsedLocal.like}</span></small
             >
           </p>
         </div>

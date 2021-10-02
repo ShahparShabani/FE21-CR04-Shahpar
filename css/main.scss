@@ -37,12 +37,12 @@
   .row {
     .my-css {
       .card {
-        // height: 25vh;
-        // box-sizing: border-box;
-        // min-height: 33rem;
-        // flex-wrap: wrap;
-        // width: 100%;
-        // margin: 0 auto;
+       
+        box-sizing: border-box;
+        min-height: 30vh;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
 
         a {
           text-decoration: none;
@@ -50,17 +50,36 @@
           color: $black;
         }
 
+        span {
+          height: 2rem;
+          width: 2rem;
+          line-height: 2rem;
+          border-radius: 30px;
+          background-color: $amber-a400;
+          color: $black;
+          text-align: center;
+          font-size: 1em;
+          display: inline-block;
+        }
+
+        i {
+          color: $amber-a400;
+        }
+
         .card-text {
           font-size: 0.875rem;
         }
 
+        #like-wrapper {
+          text-align: end;
+        }
+
         img {
-          // background-color: #f5f6f8;
-          // height: 100%;
-          // align-self: center;
+          min-height: 30vh;
+          height: 100%;
+          object-fit: cover;
         }
       }
-     
     }
   }
 }
