@@ -98,7 +98,7 @@ for (let i = 0; i < likeButtons.length; i++) {
 }
 
 
-// Sort function
+// Sort function on descending order 
 function dynamicSort(property) {
   var sortOrder = 1;
   if(property[0] === "-") {
@@ -107,7 +107,7 @@ function dynamicSort(property) {
   }
   return function (a,b) {
     
-      var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+      var result = (a[property] > b[property]) ? -1 : (a[property] < b[property]) ? 1 : 0;
       return result * sortOrder;
   }
 }
