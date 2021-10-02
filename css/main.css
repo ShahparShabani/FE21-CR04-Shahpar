@@ -1,0 +1,45 @@
+nav {
+  background-color: #CF112C;
+}
+
+nav .myIsActive {
+  font-weight: bolder;
+}
+
+.carousel-inner {
+  height: 50vh;
+}
+
+.carousel-item {
+  height: 50vh;
+}
+
+#main-container .row .my-css .card {
+  min-height: 33rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#main-container .row .my-css .card .card-text {
+  font-size: 0.875rem;
+}
+
+#main-container .row .my-css img {
+  background-color: #F5F6F8;
+  height: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#footer-container {
+  background-color: #79c9d8;
+  color: black;
+}
+
+#footer-container a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */

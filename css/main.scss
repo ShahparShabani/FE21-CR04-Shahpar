@@ -1,0 +1,48 @@
+nav {
+    background-color: #CF112C;
+  
+    .myIsActive {
+        font-weight: bolder;
+    }
+  }
+  
+  .carousel-inner {
+    height: 50vh;
+  }
+  .carousel-item {
+    height: 50vh;
+  }
+  
+  #main-container {
+    .row {
+  
+      .my-css {
+        .card {
+          min-height: 33rem;
+          flex-wrap: wrap;
+          height: 100%;
+          margin: 0 auto;
+  
+          .card-text {
+            font-size: 0.875rem;
+          }
+        }
+        img {
+          background-color: #F5F6F8;
+          height: auto;
+          align-self: center;
+        }
+      }
+    }
+  }
+  
+  #footer-container {
+      background-color:rgb(121, 201, 216);
+      color: black;
+  
+      a{
+          text-decoration: none;
+      }
+     
+  }
+  
