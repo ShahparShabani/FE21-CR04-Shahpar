@@ -111,6 +111,10 @@ body {
      object-fit: cover;
 }
 
+#main-container .modal {
+  color: #6c757d;
+}
+
 #footer-container {
   background-color: #FFC400;
   color: #fff;
