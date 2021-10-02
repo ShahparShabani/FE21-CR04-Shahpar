@@ -96,14 +96,9 @@ body {
           position: relative;
           color: $white;
           background-color: $black;
-
-          // Style like btn element
-          #like-wrapper {
-            // text-align: end;
-            // position: absolute !important;
-            // right: 20px;
-            // bottom: 20px;
-          }
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: space-around !important;
         }
 
         .card-text {
@@ -111,6 +106,7 @@ body {
         }
 
         img {
+          width: 100%;
           min-height: 30vh;
           height: 100%;
           object-fit: cover;

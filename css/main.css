@@ -98,6 +98,15 @@ body {
   position: relative;
   color: #fff;
   background-color: #000;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+  -ms-flex-pack: distribute !important;
+      justify-content: space-around !important;
 }
 
 #main-container .row .my-css .card .card-text {
@@ -105,6 +114,7 @@ body {
 }
 
 #main-container .row .my-css .card img {
+  width: 100%;
   min-height: 30vh;
   height: 100%;
   -o-object-fit: cover;
