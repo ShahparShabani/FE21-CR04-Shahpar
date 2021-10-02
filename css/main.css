@@ -5,6 +5,11 @@
 /* Yellow */
 /* Amber */
 /* Orange */
+body {
+  color: #fff;
+  background-color: #343a40;
+}
+
 #header-container nav .myIsActive {
   font-weight: bolder;
 }
@@ -19,7 +24,7 @@
 }
 
 #header-container .my-nav-bottom {
-  color: #000;
+  color: #fff;
   background-color: #6c757d;
 }
 
@@ -27,11 +32,29 @@
   color: #000;
 }
 
+#main-container .container {
+  color: #fff !important;
+  background-color: #343a40 !important;
+}
+
 #main-container .main-title {
   text-shadow: 2px 2px 4px #6b2f2f;
   font-size: 4rem;
   font-weight: 600;
   font-family: "Dancing Script", cursive !important;
+}
+
+#main-container #sort-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  color: #ced4da;
+  line-height: 0.5rem;
+}
+
+#main-container .row {
+  color: #fff;
+  background-color: #343a40;
 }
 
 #main-container .row .my-css .card {
@@ -42,12 +65,17 @@
       flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
+  background-color: #000;
+}
+
+#main-container .row .my-css .card .col-md-5 {
+  background-color: #000;
 }
 
 #main-container .row .my-css .card a {
   text-decoration: none;
   cursor: pointer;
-  color: #000;
+  color: #fff;
 }
 
 #main-container .row .my-css .card span {
@@ -66,12 +94,14 @@
   color: #FFC400;
 }
 
-#main-container .row .my-css .card .card-text {
-  font-size: 0.875rem;
+#main-container .row .my-css .card .card-body {
+  position: relative;
+  color: #fff;
+  background-color: #000;
 }
 
-#main-container .row .my-css .card #like-wrapper {
-  text-align: end;
+#main-container .row .my-css .card .card-text {
+  font-size: 0.875rem;
 }
 
 #main-container .row .my-css .card img {

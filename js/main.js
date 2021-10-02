@@ -39,13 +39,13 @@ function createCards() {
       "movie-result"
     ).innerHTML += `
   <div class="my-css">
-  <div class="card h-100 border mb-3 " style="max-width: 540px">
+  <div class="card h-100 border border-2 rounded-2 mb-3 " style="max-width: 540px">
     <div class="row g-0">
       <div class="col-md-5">
         <img
         src="../img/${movieDataArray[i].img
       }"
-          class="small-img img-fluid rounded-start"
+          class="small-img rounded p-2 img-fluid rounded-start"
           alt="Movie photo"
         />
       </div>
@@ -57,7 +57,7 @@ function createCards() {
           <p class="card-text">
           ${movieDataArray[i].storyline}
           </p>
-          <p id=like-wrapper class="card-text">
+          <p id="like-wrapper" class="card-text text-end">
             <small class="text-muted"
               ><a class="like-btn" id="a-like${i}"" data-bs-toggle="modal" data-bs-target="#movieModal2${i}">
              <i class="fas fa-thumbs-up"></i> </a><span id="like${i}" class=dot>${movieDataArray[i].like}</span></small
@@ -108,7 +108,6 @@ const likeButtons = document.getElementsByClassName("like-btn");
 for (let i = 0; i < likeButtons.length; i++) {
 
   likeButtons[i].addEventListener('click', function () {
-    console.log('in like ', i)
 
     // Get related movie from Localstorage
     let movies = new Array();

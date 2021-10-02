@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @import "variables";
 
+body {
+  color: $white;
+  background-color: $gray-800;
+}
+
 #header-container {
   nav {
     .myIsActive {
@@ -18,7 +23,7 @@
   }
 
   .my-nav-bottom {
-    color: $black;
+    color: $white;
     background-color: $gray-600;
 
     a {
@@ -28,26 +33,47 @@
 }
 
 #main-container {
+  .container {
+    color: $white !important;
+    background-color: $gray-800 !important;
+  }
+
   .main-title {
     text-shadow: 2px 2px 4px #6b2f2f;
     font-size: 4rem;
     font-weight: 600;
     font-family: "Dancing Script", cursive !important;
   }
+
+  #sort-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    color: $gray-400;
+    line-height: 0.5rem;
+  }
+
   .row {
+    color: $white;
+    background-color: $gray-800;
+
     .my-css {
       .card {
-       
         box-sizing: border-box;
         min-height: 30vh;
         flex-wrap: wrap;
         width: 100%;
         margin: 0 auto;
+        background-color: $black;
+
+        .col-md-5 {
+          background-color: $black;
+        }
 
         a {
           text-decoration: none;
           cursor: pointer;
-          color: $black;
+          color: $white;
         }
 
         span {
@@ -66,12 +92,22 @@
           color: $amber-a400;
         }
 
-        .card-text {
-          font-size: 0.875rem;
+        .card-body {
+          position: relative;
+          color: $white;
+          background-color: $black;
+
+          // Style like btn element
+          #like-wrapper {
+            // text-align: end;
+            // position: absolute !important;
+            // right: 20px;
+            // bottom: 20px;
+          }
         }
 
-        #like-wrapper {
-          text-align: end;
+        .card-text {
+          font-size: 0.875rem;
         }
 
         img {
