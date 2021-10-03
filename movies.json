@@ -3,7 +3,7 @@ var movies = `[
         "name": "Frozen",
         "year": 2013,
         "like": 102,
-        "img": "brave-1.jpeg",
+        "img": "frozen-2.jpeg",
         "categories": [
             "animation",
             "adventure",
@@ -107,7 +107,7 @@ var movies = `[
         "name": "Incredibles 2",
         "year": 2018,
         "like": 118,
-        "img": "brave-1.jpeg",
+        "img": "incredibles-2.jpeg",
         "categories": [
             "animation",
             "action",

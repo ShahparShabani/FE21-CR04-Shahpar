@@ -57,6 +57,11 @@ body {
     line-height: 0.5rem;
   }
 
+  #sort-btn:focus {
+    /* Remove button outline on focus*/
+    box-shadow: none;
+  }
+
   .row {
     color: $white;
     background-color: $gray-800;

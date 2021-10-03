@@ -56,6 +56,12 @@ body {
   line-height: 0.5rem;
 }
 
+#main-container #sort-btn:focus {
+  /* Remove button outline on focus*/
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 #main-container .row {
   color: #fff;
   background-color: #343a40;
