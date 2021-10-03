@@ -61,16 +61,14 @@ body {
     color: $white;
     background-color: $gray-800;
 
-    .my-css {
-      .card {
+    .my-movie-card-container {
+      .my-movie-card {
         box-sizing: border-box;
-        min-height: 30vh;
         flex-wrap: wrap;
-        width: 100%;
         margin: 0 auto;
         background-color: $black;
 
-        .col-md-5 {
+        .my-movie-col-md-5 {
           background-color: $black;
         }
 
@@ -96,23 +94,27 @@ body {
           color: $amber-a400;
         }
 
-        .card-body {
+        .my-movie-card-body {
           position: relative;
           color: $white;
           background-color: $black;
           display: flex !important;
           flex-direction: column !important;
-          justify-content: space-around !important;
         }
 
         .card-text {
           font-size: 0.875rem;
         }
 
+        .description-txt {
+          /* Make the description a grow to fill the available space 
+          and to place the like-wrapper at the end of the div */
+          flex-grow: 1;
+        }
+
         img {
+          /* Force img to take entire width of its container for small screens */
           width: 100%;
-          min-height: 30vh;
-          height: 100%;
           object-fit: cover;
         }
       }

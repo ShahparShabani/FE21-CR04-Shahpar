@@ -61,28 +61,26 @@ body {
   background-color: #343a40;
 }
 
-#main-container .row .my-css .card {
+#main-container .row .my-movie-card-container .my-movie-card {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-height: 30vh;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
   margin: 0 auto;
   background-color: #000;
 }
 
-#main-container .row .my-css .card .col-md-5 {
+#main-container .row .my-movie-card-container .my-movie-card .my-movie-col-md-5 {
   background-color: #000;
 }
 
-#main-container .row .my-css .card a {
+#main-container .row .my-movie-card-container .my-movie-card a {
   text-decoration: none;
   cursor: pointer;
   color: #fff;
 }
 
-#main-container .row .my-css .card span {
+#main-container .row .my-movie-card-container .my-movie-card span {
   height: 2rem;
   width: 2rem;
   line-height: 2rem;
@@ -94,11 +92,11 @@ body {
   display: inline-block;
 }
 
-#main-container .row .my-css .card i {
+#main-container .row .my-movie-card-container .my-movie-card i {
   color: #FFC400;
 }
 
-#main-container .row .my-css .card .card-body {
+#main-container .row .my-movie-card-container .my-movie-card .my-movie-card-body {
   position: relative;
   color: #fff;
   background-color: #000;
@@ -109,18 +107,23 @@ body {
   -webkit-box-direction: normal !important;
       -ms-flex-direction: column !important;
           flex-direction: column !important;
-  -ms-flex-pack: distribute !important;
-      justify-content: space-around !important;
 }
 
-#main-container .row .my-css .card .card-text {
+#main-container .row .my-movie-card-container .my-movie-card .card-text {
   font-size: 0.875rem;
 }
 
-#main-container .row .my-css .card img {
+#main-container .row .my-movie-card-container .my-movie-card .description-txt {
+  /* Make the description a grow to fill the available space 
+          and to place the like-wrapper at the end of the div */
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#main-container .row .my-movie-card-container .my-movie-card img {
+  /* Force img to take entire width of its container for small screens */
   width: 100%;
-  min-height: 30vh;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }

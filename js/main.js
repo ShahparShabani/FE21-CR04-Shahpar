@@ -15,13 +15,13 @@ function createCards() {
 
   const fisrtLoadFlag = JSON.parse(localStorage.getItem(`firstLoadFlag`))
 
-  // Check to read from json or localstorage 
+  /* Check to read from json or localstorage */
   if (fisrtLoadFlag) {
     movieDataArray = moviesParse;
   } else {
     for (let i = 0; i < moviesParse.length; i++) {
 
-      // Set movies to localstorage after sort
+      /* Set movies to localstorage after sort*/
       movieDataArray[i] = JSON.parse(localStorage.getItem(`${i}`));
     }
   }
@@ -29,32 +29,32 @@ function createCards() {
   for (let i = 0; i < movieDataArray.length; i++) {
 
     if (fisrtLoadFlag) {
-      // Set movies to localstorage before sort and on first page load
+      /* Set movies to localstorage before sort and on first page load */
       localStorage.setItem(`${i}`, JSON.stringify(movieDataArray[i]));
     }
-
+    /* Use it later to show if the movie is popular or not */
     let likeParsed = movieDataArray[i].like;
 
     document.getElementById(
       "movie-result"
     ).innerHTML += `
-  <div class="my-css">
-  <div class="card h-100 border border-2 rounded-2 mb-3 " style="max-width: 540px">
-    <div class="row g-0">
-      <div class="col-md-5">
+  <div class="my-movie-card-container col">
+  <div class="my-movie-card card h-100 border border-2 rounded-2 mb-3 " style="max-width: 540px">
+    <div class="row h-100 g-0">
+      <div class="my-movie-col-md-5 col-md-5">
         <img
         src="../img/${movieDataArray[i].img
       }"
-          class="small-img rounded p-2 img-fluid rounded-start"
+          class="small-img h-100 rounded p-2 img-fluid rounded-start"
           alt="Movie photo"
         />
       </div>
       <div class="col-md-7">
-        <div class="card-body h-100 ${likeParsed ? "read" : "not-read"}">
+        <div class="my-movie-card-body card-body h-100 ${likeParsed > 100 ? "popular" : "not-popular"}">
           <h5 class="card-title"><a class="" data-bs-toggle="modal" data-bs-target="#movieModal${i}">
           ${movieDataArray[i].name}
         </a></h5>
-          <p class="card-text">
+          <p class="card-text description-txt">
           ${movieDataArray[i].storyline}
           </p>
           <p id="like-wrapper" class="card-text text-end">
@@ -97,7 +97,7 @@ function createCards() {
 
   }
 
-  // Change load Flag
+  /* Change load Flag*/
   localStorage.setItem(`firstLoadFlag`, false);
 }
 
