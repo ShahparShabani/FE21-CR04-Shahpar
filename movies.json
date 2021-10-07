@@ -28,7 +28,7 @@ var movies = `[
         "name": "How To Train Your Dragon",
         "year": 2010,
         "like": 98,
-        "img": "brave-1.jpeg",
+        "img": "dragon-1.jpeg",
         "categories": [
             "animation",
             "action",
@@ -55,7 +55,7 @@ var movies = `[
         "name": "Moana",
         "year": 2016,
         "like": 107,
-        "img": "brave-1.jpeg",
+        "img": "moan-1.jpeg",
         "categories": [
             "animation",
             "adventure",
@@ -84,7 +84,7 @@ var movies = `[
         "name": "Jurassic Park",
         "year": 1993,
         "like": 127,
-        "img": "brave-1.jpeg",
+        "img": "juras-1.jpeg",
         "categories": [
             "adventure",
             "thriller",
@@ -124,7 +124,7 @@ var movies = `[
         "name": "Toy Story 4",
         "year": 2019,
         "like": 100,
-        "img": "brave-1.jpeg",
+        "img": "toy-1.jpeg",
         "categories": [
             "animation",
             "adventure",
@@ -150,7 +150,7 @@ var movies = `[
         "name": "The Lion King",
         "year": 1994,
         "like": 88,
-        "img": "brave-1.jpeg",
+        "img": "lion-1.jpeg",
         "categories": [
             "animated",
             "musical"
